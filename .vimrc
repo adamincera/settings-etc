@@ -35,7 +35,6 @@ set number
 
 " Syntax
 syntax on
-execute pathogen#infect()
 filetype plugin indent on
 
 "left-to-right wrapping
