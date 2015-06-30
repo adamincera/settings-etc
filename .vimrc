@@ -3,25 +3,8 @@ if has("mouse")
     set mouse=a
 endif
 
-" jj => esc
+" ctrl-j => esc
 :imap <C-j> <Esc>
-
-"remap navigation keys
-
-" :nnoremap ; l
-" :nnoremap l k
-" :nnoremap k j
-" :nnoremap j h
-" 
-" :nnoremap d; dl
-" :nnoremap dl dk
-" :nnoremap dk dj 
-" :nnoremap dj dh
-" 
-" :nnoremap y; yl 
-" :nnoremap yl yk
-" :nnoremap yk yj
-" :nnoremap yj yh
 
 " highlight search
 
