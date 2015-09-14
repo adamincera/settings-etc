@@ -3,29 +3,23 @@ if has("mouse")
     set mouse=a
 endif
 
-" jj => esc
-:imap jj <Esc>
-
-"remap navigation keys
-
-:nnoremap ; l
-:nnoremap l k
-:nnoremap k j
-:nnoremap j h
-
-:nnoremap d; dl
-:nnoremap dl dk
-:nnoremap dk dj 
-:nnoremap dj dh
-
-:nnoremap y; yl 
-:nnoremap yl yk
-:nnoremap yk yj
-:nnoremap yj yh
+" ctrl-j => esc
+:imap <C-j> <Esc>
 
 " highlight search
 
 set hlsearch
+
+" save cursor position
+
+if has("autocmd")
+      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+          \| exe "normal! g'\"" | endif
+endif
+
+" status line always on
+
+:set laststatus=2
 
 "Jae's Vim settings
 "
@@ -35,7 +29,6 @@ set number
 
 " Syntax
 syntax on
-execute pathogen#infect()
 filetype plugin indent on
 
 "left-to-right wrapping
